@@ -1,0 +1,116 @@
+<!-- Cheatsheet webpage for javascript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- To use google fonts .... -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <!-- To use Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/7e56abcdee.js" crossorigin="anonymous"></script>
+    <!-- Including css files:  -->
+         <!-- Including prism.css files:  -->
+    <link rel="stylesheet" href="../prism.css">  
+    <link rel="stylesheet" href="../index.css"> <!-- For header and footer. -->
+    <link rel="stylesheet" href="../styles/Lang-html.css">
+    <title> Javascript Cheatsheet By Mahima
+    </title>
+</head>
+<body>
+    <nav>
+        <ul id="code-ul">
+            <li> <i class="fas fa-laptop-code"></i> </li>
+            <li> Coding with Mahima </li> 
+        </ul>
+        <ul id="nav-ul">
+            <li> <a href="../index.html"> Home  </a> </li>
+            <li> <a href="./langhtml.html"> HTML </a> </li>
+            <li> <a href="./langcss.html"> CSS </a>  </li>
+            <li> <a href="#"> Javascript </a> </li>
+            <li> <a href="./langcpp.html"> C++ </a> </li>
+            <li> <a href="./langjava.html"> Java </a> </li>
+            <li> <a href="./Notes.html"> Notes </a> </li>
+        </ul>
+        <ul id="sign-up">
+            <li> <i class="fas fa-user-plus"></i>  </li>
+            <li> <span id="sign-in-span"> SignIn </span>  <span> / </span> <a href="./sign-up.html" id="sign-up-span">  SignUp </a>  </li>
+        </ul>
+    </nav>
+     <section id="section-1">
+     <div>
+           <span class="welcome"> JavaScript </span>
+           <span> 
+               <ul>
+                   <li> JavaScript is the world's most popular programming language. </li>
+                   <li> JavaScript is the programming language of the Web. </li>
+                   <li> JavaScript to program the behavior of web pages </li>
+                   <li> JavaScript Can Change HTML content, styles (CSS), hid or show elements and many more. </li>
+               </ul>
+           </span>    
+        </div>   
+    </section>
+
+    <div id="cheatsheet-heading"> <i class="far fa-copy"></i> JavaScript Cheatsheet </div>
+
+    <section id="cheatsheet">
+       <div class="sheet">
+         <div class="cheatsheet-topic"> Basic JavaScript Document </div>
+         <div class="code"> 
+            <pre>
+                <code class="language-javascript">
+document.getElementById("demo").innerHTML = "Hello JavaScript"; // JavaScript Can Change HTML Content
+document.getElementById("demo").style.fontSize = "35px"; // JavaScript Can Change HTML Styles (CSS)
+document.getElementById("demo").style.display = "none"; // JavaScript Can Hide HTML Elements
+document.getElementById("demo").style.display = "block"; // JavaScript Can Show HTML Elements
+                </code>
+            </pre>
+         </div>
+       </div>
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Javascript Objects </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-javascript">
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};     
+                </code>
+           </pre>
+        </div>
+      </div> 
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Javascript Arrays </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-javascript">
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+    txt += value + "<br>";
+}
+                </code>
+           </pre>
+        </div>
+      </div> 
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <!-- Including Js files : -->
+        <!-- Including prism script !! -->
+    <script src="../prism.js"> </script>
+    <script src="../index.js"> </script>
+</body>
+</html>

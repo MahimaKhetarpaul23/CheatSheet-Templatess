@@ -1,0 +1,212 @@
+<!-- Cheatsheet webpage for c++ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- To use google fonts .... -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <!-- To use Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/7e56abcdee.js" crossorigin="anonymous"></script>
+    <!-- Including css files:  -->
+         <!-- Including prism.css files:  -->
+    <link rel="stylesheet" href="../prism.css">  
+    <link rel="stylesheet" href="../index.css"> <!-- For header and footer. -->
+    <link rel="stylesheet" href="../styles/Lang-html.css">
+    <title> C++ Cheatsheet By Mahima
+    </title>
+</head>
+<body>
+    <nav>
+        <ul id="code-ul">
+            <li> <i class="fas fa-laptop-code"></i> </li>
+            <li> Coding with Mahima </li> 
+        </ul>
+        <ul id="nav-ul">
+            <li> <a href="../index.html"> Home  </a> </li>
+            <li> <a href="./langhtml.html"> HTML </a> </li>
+            <li> <a href="./langcss.html"> CSS </a>  </li>
+            <li> <a href="./langjs.html"> Javascript </a> </li>
+            <li> <a href="#"> C++ </a> </li>
+            <li> <a href="./langjava.html"> Java </a> </li>
+            <li> <a href="./Notes.html"> Notes </a> </li>
+        </ul>
+        <ul id="sign-up">
+            <li> <i class="fas fa-user-plus"></i>  </li>
+            <li> <span id="sign-in-span"> SignIn </span>  <span> / </span> <a href="./sign-up.html" id="sign-up-span">  SignUp </a>  </li>
+        </ul>
+    </nav>
+     <section id="section-1">
+     <div>
+           <span class="welcome"> C++ </span>
+           <span> 
+               <ul>
+                   <li> C++ is a popular programming language.  </li>
+                   <li> C++ is used to create computer programs, and is one of the most used language in game development. </li>
+                   <li> C++ is a cross-platform language that can be used to create high-performance applications. </li>
+                   <li> C++ gives programmers a high level of control over system resources and memory. </li>
+                   <li> C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.                </li>
+               </ul>
+           </span>    
+        </div>   
+    </section>
+
+    <div id="cheatsheet-heading"> <i class="far fa-copy"></i> C++ Cheatsheet </div>
+
+    <section id="cheatsheet">
+       <div class="sheet">
+         <div class="cheatsheet-topic"> Merge Two Linked Lists </div>
+         <div class="code"> 
+            <pre>
+                <code class="language-cpp">
+ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+    if(list1==NULL){
+        return list2;
+    }
+    
+    if(list2==NULL){
+        return list1;
+    }
+    
+    ListNode* head;
+    ListNode* temp1=list1;
+    ListNode* temp2=list2;
+    ListNode* prev=NULL;
+    
+    while(temp1!=NULL && temp2!=NULL){
+        if(temp1->val<temp2->val){
+            if(prev==NULL){
+                head=temp1;
+                prev=temp1;
+                ListNode* temp = temp1->next;
+                temp1->next=NULL;
+                temp1=temp;
+            }
+            else{
+                ListNode* temp = temp1->next;
+                prev->next=temp1;
+                prev=temp1;
+                // temp1->next=NULL;
+                temp1=temp;    
+            }
+        }
+        else{
+            if(prev==NULL){
+                head=temp2;
+                prev=temp2;
+                ListNode* temp = temp2->next;
+                temp2=temp;
+            }
+            else{
+                ListNode* temp = temp2->next;
+                prev->next=temp2;
+                prev=temp2;
+                temp2=temp;    
+            }
+        }
+    }            
+    if(temp1!=NULL){
+        if(prev==NULL){
+            head=temp1;
+            prev=temp1;
+        }
+        else{
+            prev->next=temp1;
+        }
+    }
+    
+    if(temp2!=NULL){
+        if(prev==NULL){
+            head=temp2;
+            prev=temp2;
+        }
+        else{
+            prev->next=temp2;
+        }
+    }
+    
+    return head;   
+}
+                </code>
+            </pre>
+         </div>
+       </div>
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Find inorder of Binary tree   </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-cpp">
+void inorder(TreeNode* root,vector<int> &in){
+    if(root==NULL){
+        return;
+    }
+    inorder(root->left,in);
+    in.push_back(root->val);
+    inorder(root->right,in);
+}
+
+vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> v;
+    inorder(root,v);
+    return v;
+}
+                </code>
+           </pre>
+        </div>
+      </div> 
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Valid Parenthesis : Check if brackets are valid or not.  </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-cpp">
+bool isValid(string s) {
+    stack<char> stk;
+    for(int i=0;i< s.size();i++){}
+        if(s[i]=='(' || s[i]=='{' || s[i]=='['){
+            stk.push(s[i]);
+        }
+        else if(s[i]==')'){
+            if(stk.empty() || stk.top()!='('){
+                return false;
+            }
+            stk.pop();
+        }
+        else if(s[i]=='}'){
+            if(stk.empty() || stk.top()!='{'){
+                return false;
+            }
+            stk.pop();
+        }         
+        else if(s[i]==']'){
+            if(stk.empty() || stk.top()!='['){
+                return false;
+            }
+            stk.pop();
+        }
+    }
+    if(stk.empty()){
+        return true;
+    }
+    return false;
+}
+                </code>
+           </pre>
+        </div>
+      </div> 
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <!-- Including Js files : -->
+        <!-- Including prism script !! -->
+    <script src="../prism.js"> </script>
+    <script src="../index.js"> </script>
+</body>
+</html>

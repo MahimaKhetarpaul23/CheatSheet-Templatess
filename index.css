@@ -1,0 +1,397 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    box-sizing:border-box;
+}
+
+nav{
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color: rgb(36, 35, 35);
+    color:white;
+    /*color:white; */
+    font-family: 'Mochiy Pop P One', sans-serif;
+    cursor:pointer;
+}
+
+nav #code-ul{
+    list-style:none;
+    display:flex;
+    margin:5px 0.1vw;
+    padding:10px 1.5vw;
+    font-size: 1.2rem;
+    font-family: 'The Nautigal', cursive;
+    transition:all 0.8s ease-in-out;
+}
+
+nav #code-ul:hover{
+    opacity:0.8;
+}
+
+.fa-laptop-code:hover{
+    cursor:pointer;
+    font-size:1.5rem;
+    box-shadow:0px 0px 4px 4px grey;
+}
+
+.fa-laptop-code{
+    font-size:1.3rem;
+    color:white;
+    margin-right:1vw;
+    box-shadow:0px 0px 2px 2px gray;
+    transition:all 0.3s ease-in-out;
+}
+
+
+nav #nav-ul{
+    box-sizing:border-box;
+    display:flex;
+    flex-wrap:wrap;
+    list-style:none;
+    padding:10px 1.5vw;
+}
+
+nav #nav-ul li{
+    box-sizing:border-box;
+    margin:5px 2.5vw;
+    padding:2px 4px;
+    cursor:pointer;
+}
+
+nav #nav-ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+
+nav #nav-ul li:hover{
+    box-shadow:0px 2px 1px 0px grey;
+}
+
+nav #sign-up{
+    display: flex;
+    list-style:none;
+    position:absolute;
+    right:20px;
+    top:16px;
+    z-index:5;
+    opacity:0.7;
+}
+
+#sign-in-span,#sign-up-span{
+    text-decoration: none;
+    color:inherit;
+    padding:4px;
+}
+
+#sign-in-span:hover,#sign-up-span:hover{
+   border:2px solid grey;
+}
+
+/* Sign-in/up icon: */
+.fa-user-plus{
+    font-size: 1.2rem;
+    margin-right:8px;
+}
+
+@media screen and (max-width:1340px ){
+    nav #nav-ul{
+        display: none;
+    }
+}
+
+#section-1{
+    box-sizing: border-box;
+    background: url("./images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:65vh;
+    width:98.5vw;
+    background-color: rgb(245, 248, 250);
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: left;
+    padding:6vh 5vw;
+    opacity:0.8;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:1000px) {
+    #section-1{
+        width:98vw;
+        height:83vh;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #section-1{
+        width:97vw;
+        height:95vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #section-1{
+        width:95vw;
+        height:115vh;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #section-1{
+        width:95vw;
+        height:125vh;
+    }
+}
+
+
+#section-1:hover{
+    opacity:1;
+}
+
+#section-1 div{
+    margin:1vh 2vw;
+    padding:1vh 1vw;
+    height:30vh;
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    word-spacing: 8px;
+    font-family: 'sans-serif';
+    cursor: pointer;
+}
+
+#section-1 .welcome{
+    font-family: 'The Nautigal', cursive;
+    font-size: 2.4rem;
+    opacity:0.9;
+    transition:all 0.9s ease-in-out;
+}
+
+#section-1 .welcome:hover{
+    opacity:0.7;
+    transform: translateX(25px);
+}
+
+#section-2{
+    margin:5vh 0vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-2 .heading{
+    margin-bottom:2vh;
+    font-size:2.2rem;
+    font-family: 'The Nautigal', cursive;
+    text-align:center;
+}
+
+#section-2 .coding-heading{
+    text-shadow:1px 1px 4px grey;
+    padding:3px;
+}
+
+#section-2 .coding-heading:hover{
+    text-shadow:2px 2px 8px grey;
+}
+
+.fa-keyboard:hover{
+    text-shadow:2px 2px 8px grey;
+}
+
+#section-2 #languages{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-wrap:wrap;
+    background-color: black;
+    font-size:1.1rem;
+    font-family: 'Moon Dance', cursive;
+}
+
+#languages .lang{
+    height:25vh;
+    width:80%;
+    padding:2vh 1vw;
+    margin:2vh 2vw;
+    background-color: #ededf4;
+    /* border:2px solid rgb(161, 158, 158); */
+    border-radius:15px;
+    box-shadow:0px 0px 1px 1.5px lightgrey;
+    display: flex;
+    flex-direction: row;
+    transition:all 0.4s ease-in-out;
+}
+
+#languages .lang:hover{
+    box-shadow:0px 0px 1px 4px lightgrey;
+    background-color: black;
+    color:white;
+}
+
+#languages .lang .languages-img{
+    height:100%;
+    width:30%;
+}
+
+#languages .lang .languages-img img{
+    height:100%;
+    width:100%;
+    box-shadow:0px 0px 4px 2px lightgrey;
+    border-radius:12px;
+}
+
+#languages .lang .languages-img img:hover{
+    box-shadow:2px 2px 4px 2px gray;
+}
+
+#languages .lang .languages-detail{
+    cursor:pointer;
+    margin-left:2%;
+    height:100%;
+    width:65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    overflow:hidden;
+}
+
+#languages .lang-name{
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+#languages .lang-name:hover{
+    text-shadow:0px 2px 2px rgb(0, 140, 255);
+    box-shadow:0px 2px 0px 0px black;
+}
+
+#languages .cheatsheet-link{
+    font-weight:590;
+}
+
+#languages .cheatsheet-link a{
+    text-decoration:none;
+    color:pink;
+}
+
+#languages .cheatsheet-link:hover{
+    text-shadow:0px 2px 2px goldenrod;
+}
+
+#section-3{
+    margin:10vh 0vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-3 .heading{
+    margin-bottom:2vh;
+    font-size:2.2rem;
+    font-family: 'The Nautigal', cursive;
+    text-align:center;
+}
+
+#section-3 .coding-heading{
+    text-shadow:1px 1px 4px grey;
+    padding:3px;
+}
+
+#section-3 .coding-heading:hover{
+    text-shadow:2px 2px 8px grey;
+}
+
+.fa-book-open:hover{
+    text-shadow:5px 5px 10px grey;
+}
+
+#section-3 #notes{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    /* background-color: #ededf4; */
+    padding:8vh 2vw;
+}
+
+#section-3 #notes .notes-divs{
+    background-color:#ededf4;
+    padding:2vh 1vw;
+    height:20rem;
+    width:18rem;
+    margin:1vh 4vw 3vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 2px 1px 0px grey;
+    box-sizing: border-box;
+}
+
+#section-3 #notes .notes-divs:hover{
+    box-shadow: 0px 0px 4px 4px gray;
+}
+
+#section-3 #notes .notes-divs .image{
+    height:50%;
+    width:98%;
+    /* background-color: tomato; */
+    margin-bottom:2vh;
+}
+
+#section-3 #notes .notes-divs img{
+    height:100%;
+    width:100%;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px gray;
+}
+
+#section-3 #notes .notes-divs img:hover{
+    box-shadow: 0px 0px 3px 3px gray;
+}
+
+#section-3 #notes .notes-divs .subject-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    font-size:1rem;
+    height:48%;
+    width:100%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#section-3 #notes .notes-divs .subject{
+    font-size:1.5rem;
+    font-weight: 100;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-shadow: 0px 2px 2px grey;
+    margin-bottom:10px;
+}
+
+#section-3 #notes .notes-divs .subject:hover{
+    text-shadow: 0px 2px 2px rgb(0, 140, 255);
+}
+
+#section-3 #notes .notes-divs .subject-det:hover{
+    text-shadow: 0px 2px 2px pink;
+}
+
+#section-3 #notes .notes-divs .view-pdf{
+    background-color: black;
+    text-decoration: none;
+    color:white;
+    padding:5px 10px;
+    border-radius: 12px;
+}
+
+#section-3 #notes .notes-divs .view-pdf:hover{
+    text-shadow: 0px 1px 1px pink;
+}

@@ -1,0 +1,62 @@
+#section-1 ul{
+    list-style:square;
+}
+
+#cheatsheet{
+    width:70%;
+    margin:auto;
+    padding:15px;
+    background-color: white;
+    font-family: 'The Nautigal', cursive;
+}
+
+#cheatsheet-heading{
+    text-align:center;
+    margin:4vh 2vw -1vh;
+    font-size:2rem;
+    font-family: 'The Nautigal', cursive;
+}
+
+#cheatsheet-heading:hover{
+    text-shadow: 0px 2px 3px gray;
+}
+
+#cheatsheet .sheet{
+    display:flex;
+    flex-direction: column;
+    margin:4vh 0vw;
+}
+
+#cheatsheet .sheet .code{
+   height:auto;
+}
+
+#cheatsheet .cheatsheet-topic{
+    font-size:1.4rem;
+}
+
+#cheatsheet .cheatsheet-topic:hover{
+    text-shadow:1px 2px 2px rgb(0, 217, 255);
+}
+
+
+pre{
+    padding:1vh 1vw !important;
+    margin:0;
+}
+
+code{
+    padding:0;
+    margin:0;
+}
+
+/* Form-div */
+form-div{
+    background-color: blueviolet;
+    height:80vh;
+    width:80vw;
+    position:absolute;
+    top:5vh;
+    z-index:10;
+    display: block;
+}

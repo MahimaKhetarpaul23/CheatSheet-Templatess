@@ -1,0 +1,144 @@
+<!-- Cheatsheet webpage for java -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- To use google fonts .... -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <!-- To use Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/7e56abcdee.js" crossorigin="anonymous"></script>
+    <!-- Including css files:  -->
+         <!-- Including prism.css files:  -->
+    <link rel="stylesheet" href="../prism.css">  
+    <link rel="stylesheet" href="../index.css"> <!-- For header and footer. -->
+    <link rel="stylesheet" href="../styles/Lang-html.css">
+    <title> Java Cheatsheet By Mahima
+    </title>
+</head>
+<body>
+    <nav>
+        <ul id="code-ul">
+            <li> <i class="fas fa-laptop-code"></i> </li>
+            <li> Coding with Mahima </li> 
+        </ul>
+        <ul id="nav-ul">
+            <li> <a href="../index.html"> Home  </a> </li>
+            <li> <a href="./langhtml.html"> HTML </a> </li>
+            <li> <a href="./langcss.html"> CSS </a>  </li>
+            <li> <a href="./langjs.html"> Javascript </a> </li>
+            <li> <a href="./langcpp.html"> C++ </a> </li>
+            <li> <a href="#"> Java </a> </li>
+            <li> <a href="./Notes.html"> Notes </a> </li>
+        </ul>
+        <ul id="sign-up">
+            <li> <i class="fas fa-user-plus"></i>  </li>
+            <li> <span id="sign-in-span"> SignIn </span>  <span> / </span> <a href="./sign-up.html" id="sign-up-span">  SignUp </a>  </li>
+        </ul>
+    </nav>
+     <section id="section-1">
+     <div>
+           <span class="welcome"> Java </span>
+           <span> 
+               <ul>
+               <li> Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.) </li>  
+               <li> It is one of the most popular programming language in the world. </li>
+               <li> It has a large demand in the current job market. </li>
+               <li> It is open-source and free. </li>
+               <li> It is secure, fast and powerful. </li>
+               <li> It is easy to learn and simple to use. </li>
+               </ul>
+           </span>    
+        </div>   
+    </section>
+
+    <div id="cheatsheet-heading"> <i class="far fa-copy"></i> Java Cheatsheet </div>
+
+    <section id="cheatsheet">
+       <div class="sheet">
+         <div class="cheatsheet-topic"> Merge Two Linked Lists </div>
+         <div class="code"> 
+            <pre>
+                <code class="language-java">
+public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+    if(l1 == null) return l2;
+    if(l2 == null) return l1;
+    if(l1.val < l2.val){
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    } else{
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
+}
+                </code>
+            </pre>
+         </div>
+       </div>
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Find inorder of Binary tree   </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-java">
+public List<Integer> inorderTraversal(TreeNode root) {
+    List<Integer> list = new ArrayList<Integer>();
+
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    TreeNode cur = root;
+
+    while(cur!=null || !stack.empty()){
+        while(cur!=null){
+            stack.add(cur);
+            cur = cur.left;
+        }
+        cur = stack.pop();
+        list.add(cur.val);
+        cur = cur.right;
+    }
+
+    return list;
+}
+                </code>
+           </pre>
+        </div>
+      </div> 
+
+      <div class="sheet">
+        <div class="cheatsheet-topic"> Valid Parenthesis : Check if brackets are valid or not.  </div>
+        <div class="code"> 
+           <pre>
+               <code class="language-java">
+public boolean isValid(String s) {
+    Stack<Character> stack = new Stack<Character>();
+    for (char c : s.toCharArray()) {
+        if (c == '(')
+            stack.push(')');
+        else if (c == '{')
+            stack.push('}');
+        else if (c == '[')
+            stack.push(']');
+        else if (stack.isEmpty() || stack.pop() != c)
+            return false;
+    }
+    return stack.isEmpty();
+}
+            </code>
+           </pre>
+        </div>
+      </div> 
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <!-- Including Js files : -->
+        <!-- Including prism script !! -->
+    <script src="../prism.js"> </script>
+    <script src="../index.js"> </script>
+</body>
+</html>
